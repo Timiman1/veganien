@@ -3,10 +3,12 @@ import ToolbarButton from "./buttons/toolbar-button.vue"
 import orderOnlineButton from "./buttons/order-online-button.vue";
 import { useDisplay } from 'vuetify'
 import { useNavViewStore } from '@/stores/navView'
+import { useTheme } from 'vuetify'
 
 const navViewStore = useNavViewStore()
 const display = useDisplay()
 const device = useDevice()
+const theme = useTheme()
 
 const calculateLogoWidth = computed(() => {
     if (device.isDesktop)
@@ -19,6 +21,10 @@ const calculateLogoWidth = computed(() => {
         return 32 * 9
 
     return 0
+})
+
+const themeBasedLogoSrc = computed(() => {
+    return (theme.global.current.value.dark ? '/img/veganien-logo-light.png' : '/img/veganien-logo-dark.png')
 })
 
 watch(display.mdAndUp, (val) => {
@@ -42,16 +48,17 @@ const calculateAppBarHeight = computed(() => {
     width: 640px;
     margin-right: 24px;
 }
+
 </style>
 
 <template>
     <v-app-bar elevation="0" :height="calculateAppBarHeight">
 
-        <v-img class="ml-12" src="/img/veganien-logo.png" :max-width="calculateLogoWidth"
+        <v-img class="ml-12" :src="themeBasedLogoSrc" :max-width="calculateLogoWidth"
             :min-width="calculateLogoWidth - 96" contain></v-img>
 
         <v-spacer></v-spacer>
-        <div v-if="$device.isDesktop" class="hidden-sm-and-down toolbar__items theme-color">
+        <div v-if="$device.isDesktop" class="hidden-sm-and-down toolbar__items">
             <toolbar-button>OM OSS</toolbar-button>
             <toolbar-button>MENY</toolbar-button>
             <toolbar-button>EVENT</toolbar-button>

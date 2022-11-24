@@ -1,10 +1,7 @@
 <script setup lang="ts">
 import toolbarButton from './buttons/toolbar-button.vue';
 import socialMediaIcons from './social-media-icons.vue';
-const icons = ref<string[]>([
-  'mdi-facebook',
-  'mdi-instagram',
-])
+import emailSignupButton from './buttons/email-signup-button.vue';
 </script>
 
 <style scoped>
@@ -22,14 +19,12 @@ const icons = ref<string[]>([
   <v-footer v-if="$device.isDesktop">
     <social-media-icons/>
     <v-spacer></v-spacer>
-    <div class="toolbar__items theme-color">
+    <div class="toolbar__items">
       <toolbar-button>PRESENTKORT</toolbar-button>
       <toolbar-button>INTIGRITETSPOLICY</toolbar-button>
       <toolbar-button>PRESS</toolbar-button>
       <toolbar-button>KONTAKTA OSS</toolbar-button>
     </div>
-    <v-btn class="mr-12 theme-color" elevation="0" variant="text" height="75" style="border: 2px solid">
-      <div class="text-h6 font-weight-bold theme-color">REGISTRERA EMAIL</div>
-    </v-btn>
+    <email-signup-button/>
   </v-footer>
 </template>
