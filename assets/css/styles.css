@@ -1,55 +1,47 @@
 .font-size-xs {
-    font-size: 21px;
+    font-size: 23px;
 }
 
 .font-size-sm {
-    font-size: 24px;
+    font-size: 26px;
 }
 
 .font-size-md {
-    font-size: 28px;
+    font-size: 29px;
 }
 
 .font-size-lg {
-    font-size: 34px;
+    font-size: 33px;
 }
 
 .font-size-xl {
-    font-size: 34px;
+    font-size: 36px;
 }
 
 .font-size-xxl {
-    font-size: 41px;
-}
-
-.toolbarFont {
-    font-size: 21px
-}
-
-.buttonFont {
-    font-size: 21px;
+    font-size: 39px;
 }
 
 .button-font-size-xs {
-    font-size: 17px;
-}
-
-.button-font-size-sm {
     font-size: 18px;
 }
 
-.button-font-size-md {
+.button-font-size-sm {
     font-size: 19px;
 }
 
-.button-font-size-lg {
+.button-font-size-md {
     font-size: 20px;
+}
+
+.button-font-size-lg {
+    font-size: 21px;
 }
 
 .button-font-size-xl {
-    font-size: 20px;
+    font-size: 21px;
 }
 
 .button-font-size-xxl {
-    font-size: 21px;
+    font-size: 22px;
 }

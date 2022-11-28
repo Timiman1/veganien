@@ -2,6 +2,13 @@
 import toolbarButton from './buttons/toolbar-button.vue';
 import socialMediaIcons from './social-media-icons.vue';
 import emailSignupButton from './buttons/email-signup-button.vue';
+import { useTheme } from 'vuetify';
+
+const theme = useTheme()
+const goDark = ref(theme.global.current.value.dark)
+watch(goDark, () => {
+    theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
+})
 </script>
 
 <style scoped>
@@ -18,6 +25,7 @@ import emailSignupButton from './buttons/email-signup-button.vue';
 <template>
   <v-footer v-if="$device.isDesktop">
     <social-media-icons/>
+    <v-switch class="mt-6" label="Mörkt tema" v-model="goDark"></v-switch>
     <v-spacer></v-spacer>
     <div class="toolbar__items">
       <toolbar-button>PRESENTKORT</toolbar-button>
