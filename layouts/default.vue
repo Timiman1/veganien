@@ -2,7 +2,7 @@
     <v-app>
         <app-bar />
         <v-main>
-            <v-container fluid>
+            <v-container class="pa-0" fluid>
                 <slot />
             </v-container>
         </v-main>

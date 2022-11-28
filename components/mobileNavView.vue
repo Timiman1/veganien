@@ -17,11 +17,11 @@ const toolbarItemTitles = ref([
 <template>
     <v-card class="d-flex justify-center align-center flex-column pa-6 my-auto" flat tile>
             <v-row no-gutters class="flex-column">
-                <v-col v-for="title in toolbarItemTitles" :key="title" class="d-flex mb-5 justify-center">
+                <v-col v-for="title in toolbarItemTitles" :key="title" class="d-flex mb-3 justify-center">
                     <toolbar-button>{{ title }}</toolbar-button>
                 </v-col>
             </v-row>
-            <order-online-button class="mt-3 mb-8" />
+            <order-online-button class="mt-5 mb-8" />
             <social-media-icons />
         </v-card>
 </template>

@@ -1,16 +1,10 @@
 <script setup lang="ts">
-import { useNavViewStore } from '~~/stores/navView';
-
-const navViewStore = useNavViewStore()
-
-const fontSize = computed(()=> {
-    return (navViewStore.isMobileNavViewActive ? "text-h5" : "text-h6")
-})
+import { useResponsiveFonts } from '~~/composables/useResponsiveFonts';
+const { fontSize} = useResponsiveFonts("button")
 </script>
-
 <template>
     <v-btn variant="text">
-        <div :class="`font-weight-bold ${fontSize}`">
+        <div class="font-weight-bold" :class="fontSize">
             <slot />
         </div>
     </v-btn>
