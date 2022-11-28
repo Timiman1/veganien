@@ -8,6 +8,7 @@ const navViewStore = useNavViewStore()
 const imageGridCols = ref(0)
 const display = useDisplay()
 const { fontSize } = useResponsiveFonts("text")
+const isImageGridDense = ref(false)
 
 onMounted(adjustCols)
 
@@ -15,6 +16,7 @@ watch(display.smAndDown, adjustCols)
 
 function adjustCols() {
     imageGridCols.value = (display.smAndDown.value ? 6 : 4)
+    isImageGridDense.value = display.smAndDown.value
 }
 const mymargin1 = "my-8 my-sm-10 my-md-10 my-lg-12 my-xl-12"
 const mymargin2 = "mt-8 mt-sm-10 mt-md-10 mt-lg-12 mt-xl-12"
@@ -59,7 +61,7 @@ const mypadding1 = "py-2 py-sm-4 py-md-4 py-lg-6 py-xl-6"
                 </v-container>
             </div>
             <v-container fluid class="px-lg-16">
-                <v-row :dense="display.smAndDown.value">
+                <v-row :dense="isImageGridDense">
                     <v-col v-for="n in 9" :key="n" class="d-flex flex-nowrap" :cols="imageGridCols">
                         <v-img :src="`/img/item${n}.jpg`" aspect-ratio="1" cover style="border-radius: 0.5rem;"/>
                     </v-col>

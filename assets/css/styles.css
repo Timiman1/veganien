@@ -45,3 +45,12 @@
 .button-font-size-xxl {
     font-size: 22px;
 }
+
+@font-face {
+    font-family: "FiraSans-Regular";
+    src: url("@/assets/fonts/FiraSans-Regular.ttf") format("truetype");
+}
+
+html {
+    font-family: "FiraSans-Regular" !important;
+}
