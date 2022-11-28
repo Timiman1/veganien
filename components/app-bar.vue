@@ -54,8 +54,10 @@ const calculateAppBarHeight = computed(() => {
 <template>
     <v-app-bar elevation="0" :height="calculateAppBarHeight">
 
-        <v-img class="ml-12" :src="themeBasedLogoSrc" :max-width="calculateLogoWidth"
-            :min-width="calculateLogoWidth - 96" contain></v-img>
+        <NuxtLink to="/">
+            <v-img class="ml-12" :src="themeBasedLogoSrc" :max-width="calculateLogoWidth"
+                :min-width="calculateLogoWidth - 96" contain></v-img>
+        </NuxtLink>
 
         <v-spacer></v-spacer>
         <div v-if="$device.isDesktop" class="hidden-sm-and-down toolbar__items">

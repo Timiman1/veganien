@@ -27,6 +27,6 @@ const { goDark } = useMyTheme()
             </v-row>
             <order-online-button class="mt-5 mb-8" />
             <social-media-icons />
-            <v-switch :label="`Mörkt tema`" v-model="goDark"></v-switch>
+            <v-switch :label="`Mörkt tema`" v-model="goDark" inset></v-switch>
         </v-card>
 </template>

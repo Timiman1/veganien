@@ -21,7 +21,7 @@ const { goDark } = useMyTheme()
 <template>
   <v-footer v-if="$device.isDesktop">
     <social-media-icons/>
-    <v-switch class="mt-6" label="Mörkt tema" v-model="goDark"></v-switch>
+    <v-switch class="d-flex" label="Mörkt tema" v-model="goDark" inset inline></v-switch>
     <v-spacer></v-spacer>
     <div class="toolbar__items">
       <toolbar-button>PRESENTKORT</toolbar-button>

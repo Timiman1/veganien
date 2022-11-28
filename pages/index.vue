@@ -37,11 +37,7 @@ const mypadding1 = "py-2 py-sm-4 py-md-4 py-lg-6 py-xl-6"
         <mobile-nav-view v-if="navViewStore.isMobileNavViewActive" />
         <div v-else>
             <div class="d-flex flex-column fill-height justify-center align-center">
-                <v-container :class="[mymargin1, 'pa-2']">
-                    <p class="font-weight-regular" :class="fontSize" style="text-align:center;">
-                        Våran meny är 100 % växtbaserad och 100 % utsökt.
-                    </p>
-                </v-container>
+                <hero-section/>
                 <v-carousel hide-delimiter-background hide-delimeters cycle :show-arrows="false"
                     :height="display.mdAndUp.value ? 1000 : (display.sm ? 500 : 250)">
                     <v-carousel-item src="/img/location-shot1.jpg" cover></v-carousel-item>
@@ -65,7 +61,7 @@ const mypadding1 = "py-2 py-sm-4 py-md-4 py-lg-6 py-xl-6"
             <v-container fluid class="px-lg-16">
                 <v-row :dense="display.smAndDown.value">
                     <v-col v-for="n in 9" :key="n" class="d-flex flex-nowrap" :cols="imageGridCols">
-                        <v-img :src="`/img/item${n}.jpg`" aspect-ratio="1" cover />
+                        <v-img :src="`/img/item${n}.jpg`" aspect-ratio="1" cover style="border-radius: 0.5rem;"/>
                     </v-col>
                 </v-row>
             </v-container>
