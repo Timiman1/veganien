@@ -10,7 +10,8 @@
   },
   "devDependencies": {
     "@nuxtjs/device": "^3.0.0",
-    "nuxt": "3.0.0-rc.12"
+    "@pinia-plugin-persistedstate/nuxt": "^1.0.0",
+    "nuxt": "^3.0.0"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.4",

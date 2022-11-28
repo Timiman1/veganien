@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     modules: [
         '@nuxtjs/device',
         '@pinia/nuxt',
+        '@pinia-plugin-persistedstate/nuxt',
     ],
     device: {
         refreshOnResize: true
@@ -16,6 +17,5 @@ export default defineNuxtConfig({
             "process.env.DEBUG": false,
         },
     },
-    target: "static",
 });
 

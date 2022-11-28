@@ -37,11 +37,11 @@ const mypadding1 = "py-2 py-sm-4 py-md-4 py-lg-6 py-xl-6"
         <mobile-nav-view v-if="navViewStore.isMobileNavViewActive" />
         <div v-else>
             <div class="d-flex flex-column fill-height justify-center align-center">
-                <v-card :class="[mymargin1, 'pa-2']" flat tile>
+                <v-container :class="[mymargin1, 'pa-2']">
                     <p class="font-weight-regular" :class="fontSize" style="text-align:center;">
                         Våran meny är 100 % växtbaserad och 100 % utsökt.
                     </p>
-                </v-card>
+                </v-container>
                 <v-carousel hide-delimiter-background hide-delimeters cycle :show-arrows="false"
                     :height="display.mdAndUp.value ? 1000 : (display.sm ? 500 : 250)">
                     <v-carousel-item src="/img/location-shot1.jpg" cover></v-carousel-item>
@@ -52,7 +52,7 @@ const mypadding1 = "py-2 py-sm-4 py-md-4 py-lg-6 py-xl-6"
 
                     <v-carousel-item src="/img/location-shot4.jpg" cover></v-carousel-item>
                 </v-carousel>
-                <v-card class="d-flex flex-column justify-center align-center" :class="[mymargin1, mypadding1]" flat tile>
+                <v-container class="d-flex flex-column justify-center align-center" :class="[mymargin1, mypadding1]">
                     <p class="font-weight-regular" :class="[
                         display.mdAndUp.value ? 'section-on-md-and-up' : '', display.smAndDown.value ? 'section-on-sm-and-down' : '', fontSize
                 ]" style="text-align: center;">
@@ -60,7 +60,7 @@ const mypadding1 = "py-2 py-sm-4 py-md-4 py-lg-6 py-xl-6"
                         libero, ut lacinia leo tristique eu. Nam maximus turpis lacus, at porta tortor viverra eget.
                 </p>
                     <order-online-button :class="mymargin2" />
-                </v-card>
+                </v-container>
             </div>
             <v-container fluid class="px-lg-16">
                 <v-row :dense="display.smAndDown.value">

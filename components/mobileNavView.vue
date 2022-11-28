@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import toolbarButton from './buttons/toolbar-button.vue';
 import orderOnlineButton from './buttons/order-online-button.vue';
-import { useTheme } from 'vuetify';
 
-const theme = useTheme()
 const toolbarItemTitles = ref([
     "OM OSS",
     "MENY",
@@ -15,10 +13,9 @@ const toolbarItemTitles = ref([
     "PRESS",
     "KONTAKTA OSS"
 ])
-const goDark = ref(theme.global.current.value.dark)
-watch(goDark, () => {
-    theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
-})
+
+const { goDark } = useMyTheme()
+
 </script>
 
 <template>

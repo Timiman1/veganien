@@ -2,13 +2,9 @@
 import toolbarButton from './buttons/toolbar-button.vue';
 import socialMediaIcons from './social-media-icons.vue';
 import emailSignupButton from './buttons/email-signup-button.vue';
-import { useTheme } from 'vuetify';
 
-const theme = useTheme()
-const goDark = ref(theme.global.current.value.dark)
-watch(goDark, () => {
-    theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
-})
+const { goDark } = useMyTheme()
+
 </script>
 
 <style scoped>
