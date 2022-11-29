@@ -11,15 +11,15 @@
 }
 
 .font-size-lg {
-    font-size: 33px;
+    font-size: 32px;
 }
 
 .font-size-xl {
-    font-size: 36px;
+    font-size: 35px;
 }
 
 .font-size-xxl {
-    font-size: 39px;
+    font-size: 38px;
 }
 
 .button-font-size-xs {
@@ -44,6 +44,30 @@
 
 .button-font-size-xxl {
     font-size: 22px;
+}
+
+.header-font-size-xs {
+    font-size: 29px;
+}
+
+.header-font-size-sm {
+    font-size: 32px;
+}
+
+.header-font-size-md {
+    font-size: 35px;
+}
+
+.header-font-size-lg {
+    font-size: 38px;
+}
+
+.header-font-size-xl {
+    font-size: 41px;
+}
+
+.header-font-size-xxl {
+    font-size: 44px;
 }
 
 @font-face {

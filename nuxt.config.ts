@@ -1,4 +1,6 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
+import Icons from 'unplugin-icons/vite'
+
 export default defineNuxtConfig({
     css: ["vuetify/lib/styles/main.sass", "mdi/css/materialdesignicons.min.css", "@/assets/css/styles.css"],
     build: {
@@ -16,6 +18,12 @@ export default defineNuxtConfig({
         define: {
             "process.env.DEBUG": false,
         },
+        plugins: [
+            Icons({
+              // the feature below is experimental ⬇️
+              autoInstall: true
+            })
+          ]
     },
 });
 

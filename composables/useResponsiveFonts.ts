@@ -1,5 +1,5 @@
 import { useDisplay } from "vuetify"
-type fontType = "text" | "button"
+type fontType = "text" | "button" | "header"
 
 export function useResponsiveFonts(type : fontType) {
     const display = useDisplay()
@@ -12,12 +12,12 @@ export function useResponsiveFonts(type : fontType) {
     
     function getFontSize(): string {
         switch (display.name.value) {
-            case 'xs': return (type == "text" ? "font-size-xs" : "button-font-size-xs")
-            case 'sm': return (type == "text" ? "font-size-sm" : "button-font-size-sm")
-            case 'md': return (type == "text" ? "font-size-md" : "button-font-size-md")
-            case 'lg': return (type == "text" ? "font-size-lg" : "button-font-size-lg")
-            case 'xl': return (type == "text" ? "font-size-xl" : "button-font-size-xl")
-            case 'xxl': return (type == "text" ? "font-size-xxl" : "button-font-size-xxl")
+            case 'xs': return (type == "text" ? "font-size-xs" : type == "button" ? "button-font-size-xs" : "header-font-size-xs")
+            case 'sm': return (type == "text" ? "font-size-sm" : type == "button" ? "button-font-size-sm" : "header-font-size-sm")
+            case 'md': return (type == "text" ? "font-size-md" : type == "button" ? "button-font-size-md" : "header-font-size-md")
+            case 'lg': return (type == "text" ? "font-size-lg" : type == "button" ? "button-font-size-lg" : "header-font-size-lg")
+            case 'xl': return (type == "text" ? "font-size-xl" : type == "button" ? "button-font-size-xl" : "header-font-size-xl")
+            case 'xxl': return (type == "text" ? "font-size-xxl" : type == "button" ? "button-font-size-xxl" : "header-font-size-xxl")
         }
     }
 
