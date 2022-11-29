@@ -3,6 +3,10 @@ import orderOnlineButton from '@/components/buttons/order-online-button.vue';
 import { useDisplay } from 'vuetify'
 import { useResponsiveFonts } from "@/composables/useResponsiveFonts"
 
+definePageMeta({
+    middleware: "navigation"
+})
+
 const imageGridCols = ref(0)
 const display = useDisplay()
 const { fontSize } = useResponsiveFonts("text")

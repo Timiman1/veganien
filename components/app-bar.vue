@@ -2,10 +2,10 @@
 import ToolbarButton from "./buttons/toolbar-button.vue"
 import orderOnlineButton from "./buttons/order-online-button.vue";
 import { useDisplay } from 'vuetify'
-import { useNavViewStore } from '@/stores/navView'
+import { useMobileMenuStore } from '~~/stores/mobileMenu'
 import { useTheme } from 'vuetify'
 
-const navViewStore = useNavViewStore()
+const mobileMenuStore = useMobileMenuStore()
 const display = useDisplay()
 const device = useDevice()
 const theme = useTheme()
@@ -28,11 +28,11 @@ const themeBasedLogoSrc = computed(() => {
 })
 
 watch(display.mdAndUp, (val) => {
-    if (val) navViewStore.activateDesktopNavView()
+    if (val) mobileMenuStore.close()
 })
 
 watch(device, (val) => {
-    if (val.isDesktop) navViewStore.activateDesktopNavView()
+    if (val.isDesktop) mobileMenuStore.close()
 })
 const calculateAppBarHeight = computed(() => {
     return (display.mdAndUp.value ? 32 * 5 : (display.sm.value ? 32 * 4 : 32 * 3))
@@ -69,8 +69,8 @@ const calculateAppBarHeight = computed(() => {
         </div>
         <order-online-button v-if="$device.isDesktop" class="hidden-sm-and-down mr-12" />
         <template v-slot:append>
-            <v-app-bar-nav-icon :icon="navViewStore.isMobileNavViewActive ? 'mdi-close-circle-outline' : 'mdi-menu'"
-                :class="{ 'hidden-md-and-up': $device.isDesktop }" class="mr-10" @click="navViewStore.clickNavIcon()">
+            <v-app-bar-nav-icon :icon="mobileMenuStore.isActive ? 'mdi-close-circle-outline' : 'mdi-menu'"
+                :class="{ 'hidden-md-and-up': $device.isDesktop }" class="mr-10" @click="mobileMenuStore.clickMenuIcon()">
             </v-app-bar-nav-icon>
         </template>
     </v-app-bar>

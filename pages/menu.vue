@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { useDisplay } from 'vuetify';
-
+definePageMeta({
+    middleware: "navigation"
+})
 const display = useDisplay();
 const imageGridCols = ref(0)
 const { fontSize: headerFontSize } = useResponsiveFonts("header")

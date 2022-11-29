@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useNavViewStore } from '@/stores/navView'
-const navViewStore = useNavViewStore()
+import { useMobileMenuStore } from '~~/stores/mobileMenu'
+const mobileMenuStore = useMobileMenuStore()
 </script>
 
 <template>
@@ -8,7 +8,7 @@ const navViewStore = useNavViewStore()
         <app-bar />
         <v-main>
             <v-container class="pa-0" fluid>
-                <mobile-nav-view v-if="navViewStore.isMobileNavViewActive" />
+                <mobile-menu v-if="mobileMenuStore.isActive" />
                 <div v-else>
                     <slot />
                 </div>

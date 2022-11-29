@@ -15,7 +15,12 @@ import HappyCow from '~icons/simple-icons/happycow'
                     mdi-instagram
                 </v-icon>
             </v-btn>
-            <v-btn class="mx-4 black--text" icon href="https://www.happycow.net/reviews/veganen-varberg-100928" target="_blank">
+            <v-btn class="mx-4 white--text" icon href="https://www.tripadvisor.se/Restaurant_Review-g189892-d18901050-Reviews-Veganen-Varberg_Varberg_Municipality_Halland_County_West_Coast.html" target="_blank">
+                <v-icon size="24px">
+                    mdi-owl
+                </v-icon>
+            </v-btn>
+            <v-btn class="mx-4 white--text" icon href="https://www.happycow.net/reviews/veganen-varberg-100928" target="_blank">
                 <HappyCow style="font-size: 24px;" />
             </v-btn>
         </v-card-text>
