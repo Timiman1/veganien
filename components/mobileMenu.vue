@@ -25,7 +25,7 @@ const { goDark } = useMyTheme()
                     <toolbar-button :to="title == 'MENY' ? 'menu' : ''">{{ title }}</toolbar-button>
                 </v-col>
             </v-row>
-            <order-online-button class="mt-5 mb-8" />
+            <order-online-button class="mt-5 mb-4" />
             <social-media-icons />
             <v-switch :label="`Mörkt tema`" v-model="goDark" inset></v-switch>
         </v-card>
