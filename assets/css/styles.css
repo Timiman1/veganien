@@ -1,25 +1,25 @@
 .font-size-xs {
-    font-size: 23px;
+    font-size: 21px;
 }
 
 .font-size-sm {
-    font-size: 26px;
+    font-size: 24px;
 }
 
 .font-size-md {
-    font-size: 29px;
+    font-size: 27px;
 }
 
 .font-size-lg {
-    font-size: 32px;
+    font-size: 30px;
 }
 
 .font-size-xl {
-    font-size: 35px;
+    font-size: 33px;
 }
 
 .font-size-xxl {
-    font-size: 38px;
+    font-size: 35px;
 }
 
 .button-font-size-xs {
@@ -75,6 +75,42 @@
     src: url("@/assets/fonts/FiraSans-Regular.ttf") format("truetype");
 }
 
-html {
-    font-family: "FiraSans-Regular" !important;
+.hand-drawn-button {
+    background: transparent !important;
+    padding: 1rem 0.75rem 2.5rem 0.75rem !important;
+    margin: 0 0.5rem !important;
+    font-size: 1rem !important;
+
+    border-top-left-radius: 255px 15px !important;
+    border-top-right-radius: 15px 225px !important;
+    border-bottom-right-radius: 225px 15px !important;
+    border-bottom-left-radius: 15px 255px !important;
+}
+
+.hand-drawn-button:hover {
+    box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, .3) !important;
+}
+
+.hand-drawn-button.lined.thick {
+    border: solid 3px;
+}
+
+.hand-drawn-button.dotted.thick {
+    border: dotted 3px;
+}
+
+.hand-drawn-button.dashed.thick {
+    border: dashed 3px;
+}
+
+.hand-drawn-button.lined.thin {
+    border: solid 2px;
+}
+
+.hand-drawn-button.dotted.thin {
+    border: dotted 2px;
+}
+
+.hand-drawn-button.dashed.thin {
+    border: dashed 2px;
 }

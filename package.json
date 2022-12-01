@@ -9,6 +9,7 @@
     "start": "nuxt start"
   },
   "devDependencies": {
+    "@iconify-json/ic": "^1.1.10",
     "@iconify-json/simple-icons": "^1.1.37",
     "@nuxtjs/device": "^3.0.0",
     "@pinia-plugin-persistedstate/nuxt": "^1.0.0",

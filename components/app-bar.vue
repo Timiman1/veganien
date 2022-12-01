@@ -9,6 +9,7 @@ const mobileMenuStore = useMobileMenuStore()
 const display = useDisplay()
 const device = useDevice()
 const theme = useTheme()
+const router = useRouter()
 
 const calculateLogoWidth = computed(() => {
     if (device.isDesktop)
@@ -62,7 +63,7 @@ const calculateAppBarHeight = computed(() => {
         <v-spacer></v-spacer>
         <div v-if="$device.isDesktop" class="hidden-sm-and-down toolbar__items">
             <toolbar-button>OM OSS</toolbar-button>
-            <toolbar-button to="menu">MENY</toolbar-button>
+            <toolbar-button @click="router.push('/menu')">MENY</toolbar-button>
             <toolbar-button>EVENT</toolbar-button>
             <toolbar-button>BESÖK</toolbar-button>
             <toolbar-button>CATERING</toolbar-button>

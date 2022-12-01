@@ -36,24 +36,26 @@ const mypadding1 = "py-2 py-sm-4 py-md-4 py-lg-6 py-xl-6"
 </style>
 
 <template>
-    <div class="d-flex flex-column fill-height justify-center align-center">
+    <div class="boxxx"></div>
+    <div class="d-flex flex-column fill-height justify-center align-center" style="{z-index: 10000 !important}">
         <hero-section />
         <v-carousel hide-delimiter-background hide-delimeters cycle :show-arrows="false"
             :height="display.mdAndUp.value ? 1000 : (display.sm ? 500 : 250)">
-            <v-carousel-item src="/img/location-shot1.jpg" cover></v-carousel-item>
+            <v-carousel-item src="/img/carousel-items/1.jpg" cover></v-carousel-item>
 
-            <v-carousel-item src="/img/location-shot2.jpg" cover></v-carousel-item>
-
-            <v-carousel-item src="/img/location-shot3.jpg" cover></v-carousel-item>
-
-            <v-carousel-item src="/img/location-shot4.jpg" cover></v-carousel-item>
+            <v-carousel-item src="/img/carousel-items/2.jpg" cover></v-carousel-item>
+            
+            <v-carousel-item src="/img/carousel-items/3.jpg" cover></v-carousel-item>
+            
+            <v-carousel-item src="/img/carousel-items/4.jpg" cover></v-carousel-item>
+            
+            <v-carousel-item src="/img/carousel-items/5.jpg" cover></v-carousel-item>
         </v-carousel>
         <v-container class="d-flex flex-column justify-center align-center" :class="[mymargin1, mypadding1]">
             <p class="font-weight-regular" :class="[
                 display.mdAndUp.value ? 'section-on-md-and-up' : '', display.smAndDown.value ? 'section-on-sm-and-down' : '', fontSize
             ]" style="text-align: center;">
-                Aenean lorem justo, sodales at nisl vitae, mattis consectetur nulla. Ut facilisis blandit
-                libero, ut lacinia leo tristique eu. Nam maximus turpis lacus, at porta tortor viverra eget.
+                Veganen är Varbergs enda 100% växtbaserade och därtill jazzigaste restaurang. Vår växtbaserade mat fyller dig och får dig att må bra. Besök oss eller beställ online!
             </p>
             <order-online-button :class="mymargin2" />
         </v-container>

@@ -9,7 +9,7 @@ export const useThemeStore = defineStore('theme', {
     persist: true,
     actions: {
         toggleTheme(theme : ThemeInstance) {
-            theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
+            theme.global.name.value = theme.global.current.value.dark ? 'myCustomLightTheme' : 'dark'
             this.themeDark = theme.global.current.value.dark
         },
     },
