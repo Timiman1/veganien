@@ -5,8 +5,8 @@ import "vuetify/dist/vuetify.min.css"
 const myCustomLightTheme = {
   dark: false,
   colors: {
-    background: '#F5F5DC',
-    surface: '#F5F5DC',
+    background: '#FFFFFF',
+    surface: '#FFFFFF',
     primary: '#6200EE',
     'primary-darken-1': '#3700B3',
     secondary: '#03DAC6',
